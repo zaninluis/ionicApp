@@ -1,0 +1,119 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="secondary"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary" [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <div class="logo">
+        <ion-avatar><ion-img
+            src="https://cdn.discordapp.com/attachments/745503961121030254/1120488464819953744/OIG.Azqod4W8OTwlmpaKwTUI.jpeg"></ion-img></ion-avatar>
+        <div class="test">
+          <h3 class="teste"><b>Cardápio</b></h3>
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-segment (ionChange)="alterar($event)">
+      <ion-segment-button value="Salgadas"><ion-icon name="pizza"></ion-icon>Salgadas</ion-segment-button>
+      <ion-segment-button value="Doces"><ion-icon name="pizza"></ion-icon>Doces</ion-segment-button>
+    </ion-segment>
+  </ion-card>
+  <ion-list *ngIf="escolha=='Salgadas'" color="primary">
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Calabresa</b></p>
+        </div>
+        <p>A tradicional calabresa italiana, com cebola e um toque de pimenta do reino!</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1121561888497606787/image.png"></ion-img>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Margueritta</b></p>
+        </div>
+        <p>A pizza mais tradicional de todas, tomate e folhas de manjericão!</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1121562216064360609/image.png"></ion-img>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>4 Queijos</b></p>
+        </div>
+        <p>As 4 camadas de queijos mais gostosas da casa!</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1121562316534722580/image.png"></ion-img>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Portuguesa</b></p>
+        </div>
+        <p>A pizza tradicional portuguesa!</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1121562521233535006/image.png"></ion-img>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Frango com Requeijão</b></p>
+        </div>
+        <p>O requeijão mais cremoso que existe e aquele peito de frango suculento!</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1121562724485316678/image.png"></ion-img>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <ion-list *ngIf="escolha=='Doces'">
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Pizza de brigadeiro</b></p>
+        </div>
+        <p>O brigadeiro mais delicioso da sua vida!</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1121592933641093180/image.png"></ion-img>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Pizza de Ovomaltine!</b></p>
+        </div>
+        <p>O crocante Ovomaltine</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1121592989093990521/image.png"></ion-img>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Churros de chocolate</b></p>
+        </div>
+        <p>Gostinho de churros de beira da praia sabor chocolate!</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1121593022996566137/image.png"></ion-img>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Churros de doce de leite</b></p>
+        </div>
+        <p>Gostinho de churros de beira da praia sabor doce de leite!</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1121593057129803826/image.png"></ion-img>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

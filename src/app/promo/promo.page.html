@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-menu-button slot="start" color="secondary"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary" [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <div class="logo">
+        <ion-avatar><ion-img
+            src="https://cdn.discordapp.com/attachments/745503961121030254/1120488464819953744/OIG.Azqod4W8OTwlmpaKwTUI.jpeg"></ion-img></ion-avatar>
+        <div class="test">
+          <h3 class="teste"><b>Faça seu registro: </b></h3>
+        </div>
+      </div>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Nome:</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Fone:</ion-label>
+          <ion-input type="tel"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Email:</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Senha:</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Data de nascimento:</ion-label>
+          <ion-input type="date"></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+          <ion-list-header>Interesses:</ion-list-header>
+        </ion-item> -->
+        <!-- <ion-item>
+          <ion-checkbox color="danger">Ionic</ion-checkbox>
+        </ion-item> -->
+        <!-- <ion-item>
+          <ion-checkbox color="danger">Angular</ion-checkbox>
+        </ion-item> -->
+
+        <ion-radio-group value="sexo">
+          <ion-item>
+            <p>Sexo: </p>
+          </ion-item>
+          <ion-item>
+            <ion-label>Masculino</ion-label>
+            <ion-radio slot="end" value="masc"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Feminino</ion-label>
+            <ion-radio slot="end" value="fem"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+        <ion-item>
+          <ion-label> País que reside: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>Brasil</ion-select-option>
+            <ion-select-option>Outro</ion-select-option> </ion-select>
+        </ion-item>
+      </ion-list>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
