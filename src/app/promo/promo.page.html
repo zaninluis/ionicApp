@@ -14,57 +14,50 @@
           <h3 class="teste"><b>Faça seu registro: </b></h3>
         </div>
       </div>
-      <ion-list>
-        <ion-item>
-          <ion-label position="stacked">Nome:</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Fone:</ion-label>
-          <ion-input type="tel"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Email:</ion-label>
-          <ion-input type="email"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Senha:</ion-label>
-          <ion-input type="password"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Data de nascimento:</ion-label>
-          <ion-input type="date"></ion-input>
-        </ion-item>
-        <!-- <ion-item>
-          <ion-list-header>Interesses:</ion-list-header>
-        </ion-item> -->
-        <!-- <ion-item>
-          <ion-checkbox color="danger">Ionic</ion-checkbox>
-        </ion-item> -->
-        <!-- <ion-item>
-          <ion-checkbox color="danger">Angular</ion-checkbox>
-        </ion-item> -->
-
-        <ion-radio-group value="sexo">
+      <ion-card>
+        <ion-list>
           <ion-item>
-            <p>Sexo: </p>
+            <ion-label position="stacked">Nome:</ion-label>
+            <ion-input type="text"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label>Masculino</ion-label>
-            <ion-radio slot="end" value="masc"></ion-radio>
+            <ion-label position="stacked">Fone:</ion-label>
+            <ion-input type="tel"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label>Feminino</ion-label>
-            <ion-radio slot="end" value="fem"></ion-radio>
+            <ion-label position="stacked">Email:</ion-label>
+            <ion-input type="email"></ion-input>
           </ion-item>
-        </ion-radio-group>
-        <ion-item>
-          <ion-label> País que reside: </ion-label>
-          <ion-select cancelText="Cancelar" okText="Confirmar">
-            <ion-select-option>Brasil</ion-select-option>
-            <ion-select-option>Outro</ion-select-option> </ion-select>
-        </ion-item>
-      </ion-list>
+          <ion-item>
+            <ion-label position="stacked">Senha:</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Data de nascimento:</ion-label>
+            <ion-input type="date"></ion-input>
+          </ion-item>
+          <ion-radio-group value="sexo">
+            <ion-item>
+              <p>Sexo: </p>
+            </ion-item>
+            <ion-item>
+              <ion-label>Masculino</ion-label>
+              <ion-radio slot="end" value="masc"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Feminino</ion-label>
+              <ion-radio slot="end" value="fem"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+          <ion-item>
+            <ion-label> País que reside: </ion-label>
+            <ion-select cancelText="Cancelar" okText="Confirmar">
+              <ion-select-option>Brasil</ion-select-option>
+              <ion-select-option>Outro</ion-select-option> </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+      <ion-button fill="solid" expand="block" color="success" (click)="abrirPagina('/login')">Enviar</ion-button>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+</ion-content>s

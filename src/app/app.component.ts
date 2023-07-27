@@ -14,6 +14,7 @@ export class AppComponent {
     { title: 'Login', url: 'login', icon: 'person' },
     { title: 'Home', url: 'home', icon: 'home' },
     { title: 'Cardápio', url: 'cardapio', icon: 'book' },
+    { title: 'Seu carrinho', url: 'carrinho', icon: 'cart' },
     { title: 'Registro de clientes', url: 'promo', icon: 'people' },
   ];
   

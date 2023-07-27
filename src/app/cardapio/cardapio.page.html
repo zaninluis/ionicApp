@@ -19,10 +19,11 @@
   <ion-card>
     <ion-segment (ionChange)="alterar($event)">
       <ion-segment-button value="Salgadas"><ion-icon name="pizza"></ion-icon>Salgadas</ion-segment-button>
-      <ion-segment-button value="Doces"><ion-icon name="pizza"></ion-icon>Doces</ion-segment-button>
+      <ion-segment-button value="Doces"><ion-icon name="nutrition-outline"></ion-icon>Doces</ion-segment-button>
+      <ion-segment-button value="Bebidas"><ion-icon name="beer-outline"></ion-icon>Bebidas</ion-segment-button>
     </ion-segment>
   </ion-card>
-  <ion-list *ngIf="escolha=='Salgadas'" color="primary">
+  <ion-list *ngIf="escolha=='Salgadas'" color="primary" class="lista">
     <ion-card>
       <ion-card-content>
         <div class="combo">
@@ -31,6 +32,17 @@
         <p>A tradicional calabresa italiana, com cebola e um toque de pimenta do reino!</p>
         <ion-img
           src="https://cdn.discordapp.com/attachments/1121561871758131280/1121561888497606787/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>P</ion-select-option>
+            <ion-select-option>M</ion-select-option>
+            <ion-select-option>G</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Pizza Calabresa')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
       </ion-card-content>
     </ion-card>
     <ion-card>
@@ -41,6 +53,17 @@
         <p>A pizza mais tradicional de todas, tomate e folhas de manjericão!</p>
         <ion-img
           src="https://cdn.discordapp.com/attachments/1121561871758131280/1121562216064360609/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>P</ion-select-option>
+            <ion-select-option>M</ion-select-option>
+            <ion-select-option>G</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Pizza Margueritta')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
       </ion-card-content>
     </ion-card>
     <ion-card>
@@ -51,6 +74,17 @@
         <p>As 4 camadas de queijos mais gostosas da casa!</p>
         <ion-img
           src="https://cdn.discordapp.com/attachments/1121561871758131280/1121562316534722580/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>P</ion-select-option>
+            <ion-select-option>M</ion-select-option>
+            <ion-select-option>G</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Pizza 4 Queijos')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
       </ion-card-content>
     </ion-card>
     <ion-card>
@@ -61,6 +95,17 @@
         <p>A pizza tradicional portuguesa!</p>
         <ion-img
           src="https://cdn.discordapp.com/attachments/1121561871758131280/1121562521233535006/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>P</ion-select-option>
+            <ion-select-option>M</ion-select-option>
+            <ion-select-option>G</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Pizza Portuguesa')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
       </ion-card-content>
     </ion-card>
     <ion-card>
@@ -71,10 +116,21 @@
         <p>O requeijão mais cremoso que existe e aquele peito de frango suculento!</p>
         <ion-img
           src="https://cdn.discordapp.com/attachments/1121561871758131280/1121562724485316678/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>P</ion-select-option>
+            <ion-select-option>M</ion-select-option>
+            <ion-select-option>G</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Pizza Frango com Requeijão')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
       </ion-card-content>
     </ion-card>
   </ion-list>
-  <ion-list *ngIf="escolha=='Doces'">
+  <ion-list *ngIf="escolha=='Doces'" class="lista">
     <ion-card>
       <ion-card-content>
         <div class="combo">
@@ -83,6 +139,17 @@
         <p>O brigadeiro mais delicioso da sua vida!</p>
         <ion-img
           src="https://cdn.discordapp.com/attachments/1121561871758131280/1121592933641093180/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>P</ion-select-option>
+            <ion-select-option>M</ion-select-option>
+            <ion-select-option>G</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Pizza de Brigadeiro')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
       </ion-card-content>
     </ion-card>
     <ion-card>
@@ -93,6 +160,17 @@
         <p>O crocante Ovomaltine</p>
         <ion-img
           src="https://cdn.discordapp.com/attachments/1121561871758131280/1121592989093990521/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>P</ion-select-option>
+            <ion-select-option>M</ion-select-option>
+            <ion-select-option>G</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Pizza de Ovomaltine')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
       </ion-card-content>
     </ion-card>
     <ion-card>
@@ -103,6 +181,17 @@
         <p>Gostinho de churros de beira da praia sabor chocolate!</p>
         <ion-img
           src="https://cdn.discordapp.com/attachments/1121561871758131280/1121593022996566137/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>P</ion-select-option>
+            <ion-select-option>M</ion-select-option>
+            <ion-select-option>G</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Churros de chocolate')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
       </ion-card-content>
     </ion-card>
     <ion-card>
@@ -113,6 +202,121 @@
         <p>Gostinho de churros de beira da praia sabor doce de leite!</p>
         <ion-img
           src="https://cdn.discordapp.com/attachments/1121561871758131280/1121593057129803826/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>P</ion-select-option>
+            <ion-select-option>M</ion-select-option>
+            <ion-select-option>G</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Churros de doce de leite')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <ion-list *ngIf="escolha=='Bebidas'" class="lista">
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Água</b></p>
+        </div>
+        <p>Com gelo ou sem?</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1122706929693757440/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>550ml</ion-select-option>
+            <ion-select-option>2L</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Água')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Água com gás</b></p>
+        </div>
+        <p>Com limão expremido ou em rodela?</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1122707486932218017/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>550ml</ion-select-option>
+            <ion-select-option>2L</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Água com gás')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Coca-Cola</b></p>
+        </div>
+        <p>Limão e gelo no copo?</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1122706871913042040/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>350ml</ion-select-option>
+            <ion-select-option>600ml</ion-select-option>
+            <ion-select-option>2L</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Coca-Cola')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Cola-Cola Zero</b></p>
+        </div>
+        <p>Não vai estragar sua dieta!</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1122708376065949806/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>350ml</ion-select-option>
+            <ion-select-option>600ml</ion-select-option>
+            <ion-select-option>2L</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Coca-Cola Zero')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <div class="combo">
+          <p><b>Cerveja Heineken</b></p>
+        </div>
+        <p>Geladinha!</p>
+        <ion-img
+          src="https://cdn.discordapp.com/attachments/1121561871758131280/1122708999217881138/image.png"></ion-img>
+        <ion-item>
+          <ion-label> Tamanho: </ion-label>
+          <ion-select cancelText="Cancelar" okText="Confirmar">
+            <ion-select-option>350ml</ion-select-option>
+            <ion-select-option>1L</ion-select-option></ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="adicionarAoCarrinho('Cerveja Heineken')">Adicionar ao Carrinho</ion-button>
+          <ion-button (click)="exibirCarrinho()">Exibir Carrinho</ion-button>
+        </ion-item>
       </ion-card-content>
     </ion-card>
   </ion-list>
